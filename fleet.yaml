@@ -1,0 +1,9 @@
+defaultNamespace: dal
+targetCustomizations:
+- name: dal-portal-dns-alias
+   clusterSelector:
+       clusterGroup: "dal-8.3"
+   helm:
+        chart: http://67.43.2.114/~mikes/hello-world.tgz
+    kustomize:
+        dir: dal-portal-dns-alias
