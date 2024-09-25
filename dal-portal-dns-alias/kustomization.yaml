@@ -1,4 +1,4 @@
 patches:
 - path: dal-deployment-patch.yaml
-   target:
-       kind: Deployment
+target:
+  kind: Deployment
