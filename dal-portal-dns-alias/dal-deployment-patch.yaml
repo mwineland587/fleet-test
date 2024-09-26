@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-      name: "bob"
+  name: "bob"
 spec:
-    template:
-        spec:
-             hostAliases:
-             - ip: "1.2.3.4"
-                hostnames:
-                   - "fake.com"
+  template:
+    spec:
+      hostAliases:
+      - ip: "1.2.3.4"
+        hostnames:
+          - "fake.com"
