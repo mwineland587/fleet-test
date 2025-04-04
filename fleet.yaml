@@ -1,8 +1,17 @@
-defaultNamespace: dal
-targetCustomizations:
-- name: dal-portal-dns-alias
-  clusterGroup: "dal-8.3"
-  helm:
-    chart: http://67.43.2.114/~mikes/hello-world.tgz
-  kustomize:
-    dir: dal-portal-dns-alias
+defaultNamespace: eso
+
+helm:
+  repo: https://charts.external-secrets.io
+  chart: external-secrets
+  releaseName: external-secrets
+  version: ""  # Ensure correct Helm chart version
+  valuesFiles:
+    - helm-values.yaml
+#  values:
+#    installCRDs: false  # Skip CRD installation (handled by the pre-install job)
+#    clusterRole:
+#      create: false
+
+#dependsOn:
+#  - name: preinstall-job  # Ensures job runs before Helm deployment
+#    path: preinstall-job.yaml
