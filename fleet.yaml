@@ -3,10 +3,6 @@ defaultNamespace: eso
 helm:
   repo: https://charts.external-secrets.io
   chart: external-secrets
-  releaseName: external-secrets
-  version: ""  # Ensure correct Helm chart version
-  valuesFiles:
-    - helm-values.yaml
 #  values:
 #    installCRDs: false  # Skip CRD installation (handled by the pre-install job)
 #    clusterRole:
