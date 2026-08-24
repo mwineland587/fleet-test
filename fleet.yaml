@@ -1,0 +1,20 @@
+name: azdo-fleet-cert-manager
+defaultNamespace: cert-manager
+downstreamResources:
+  - kind: Secret
+    name: application-collection
+helm:
+  releaseName: cert-manager
+  repo: oci://dp.apps.rancher.io/charts/cert-manager
+  values:
+    crds:
+      enabled: true
+      keep: true
+    global:
+      imagePullSecrets:
+        - application-collection
+    startupapicheck:
+      timeout: 600m
+  version: 1.20.3
+helmSecretName: auth-rmhjx
+keepResources: true
