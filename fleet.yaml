@@ -5,8 +5,8 @@ downstreamResources:
     name: application-collection
 helm:
   releaseName: cert-manager
-  repo: oci://dp.apps.rancher.io/charts/cert-manager
-  chart: cert-manager
+  repo: oci://dp.apps.rancher.io
+  chart: charts/cert-manager
   values:
     crds:
       enabled: true
